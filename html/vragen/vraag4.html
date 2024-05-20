@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vraag 4</title>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/styles/css/main.css">
+
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="/scripts/checkAnswer.js"></script>
+    <!-- <script src="/scripts/preloader.js"></script> -->
+
+</head>
+<body>
+
+    <!-- Preloader -->
+    <!-- <div id="preloader">
+        <div id="loader"></div>
+    </div> -->
+
+    <div class="custom_cursor"></div>
+
+    <div class="header">
+        <div class="header_logo">
+            <!-- <img src="logo.png" alt="Logo"> -->
+            <p><a href="/index.html">Publi<span>Lemon.</a></span></p>
+        </div>
+        <div class="header_contact">
+            <a href="/html/contact.html"><button class="general_style_button" role="button">CONTACT</button></a>
+        </div>
+    </div>
+
+    <div class="wrapper_left">
+        <div class="wrapper_left_content">
+            <h1>Wil je online meer aanwezigheid tonen?</h1>
+            <label class="circle_container">
+                <input class="question" type="radio" data-answer="yes_4">
+                <span class="checkmark">Ja</span>
+            </label>
+            <label class="circle_container">
+                <input class="question" type="radio" data-answer="no_4">
+                <span class="checkmark">Nee</span>
+            </label>
+            <div id="error_message"></div>
+            <div class="button_wrapper">
+                <a href="javascript:history.back()"><button class="general_style_button" type="button">VORIGE</button></a>
+                <a><button id="next_button" class="general_style_button" type="button">VOLGENDE</button></a>
+            </div>    
+        </div>
+        <div class="wrapper_left_assets">
+            <img src="/assets/vraag_1.jpg" alt="an image">
+        </div>
+    </div>
+
+    <footer>
+        <div class="left">
+            <h1>Publi<span>Lemon</span></h1>
+            <p>Jouw allaround marketingbureau! <br> Één aanspreekpunt
+                voor al jouw marketing, vers geperst op maat van jouw onderneming. 
+                <br><br> Van sociaal media beheer en advies tot de uitwerking
+                van drukwerk, logo, websites, online advertenties en zoveel meer!
+            </p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="right">
+            <div class="explore">
+                <h2>Ontdek</h2>
+                <p><a href="/index.html">Home</a></p>
+                <p><a href="/html/contact.html">Contact</a></p>
+            </div>
+            <div class="visit">
+                <h2>Bezoek ons</h2>
+                <p>Weg op Bree <br>
+                23/1, 3670 <br>
+                Oudsbergen</p>
+            </div>
+            <div class="follow">
+                <h2>Volg ons</h2>
+                <p><a href="https://www.facebook.com/Publilemon/">Facebook</a></p>
+                <p><a href="https://www.instagram.com/publilemon/">Instagram</a></p>
+                <p><a href="https://www.tiktok.com/@publilemon">Tik Tok</a></p>
+                <p><a href="https://www.linkedin.com/company/publilemon/?originalSubdomain=be">LinkedIn</a></p>
+            </div>
+            <div class="legal">
+                <h2>Legaal</h2>
+                <p><a href="#">Privacybeleid</a></p>
+                <p><a href="#">Voorwaarden</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- scripts -->
+    <script src="/scripts/customCursor.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+@use 'base' as *;
+
+// Left side questions
+.wrapper_left {
+    @include displayFlex(row, center, center);
+    width: 100%;
+    min-height: 85vh;
+    gap: 6rem;
+
+    &_content {
+        @include displayFlex(column, center, start);
+        width: calc(50%);
+        margin: 0 0 2rem 6rem;
+        gap: 1rem;
+
+        h1 {
+            font-size: 5.5rem;
+            font-family: $font-raleway;
+            font-weight: 700;
+            margin-bottom: 3rem;
+        }
+        .circle_container {
+            @include displayFlex(row, start, center);
+            gap: 1rem;
+
+            .question {
+                width: 2rem;
+                height: 2rem;
+            }
+
+            input[type=radio] {
+                accent-color: $main-color;
+            }
+
+            .checkmark {
+                font-size: 1.75rem;
+            }
+        }
+        .button_wrapper {
+            margin-top: 1rem;
+        }
+        #error_message {
+            margin-top: 1rem;
+            font-size: 1.5rem;
+            color: red
+        }
+    }
+
+    &_assets {
+        @include displayFlex(row, center, center);
+        width: calc(50%);
+        border: 3px solid $main-color;
+        border-radius: 15px;
+        margin: 0 6rem 3rem 0;
+        height: auto;
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+        }
+    }
+}
+
+// Media queries
+@media only screen and (min-width: 768px) and (max-width: 1365px) {
+    .wrapper_left {
+        @include displayFlex(column, center, start);
+        gap: 3rem;
+        min-height: auto;
+
+        &_content {
+            width: 70%;
+            margin: 0rem 0 0rem 6rem;
+
+            h1 {
+                font-size: 3.5rem;
+            }
+        }
+
+        &_assets {
+            width: calc(77%);
+            margin: 0 0 3rem 6rem;
+            height: auto;
+
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+                border-radius: 12px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .wrapper_left {
+        @include displayFlex(column, center, start);
+        gap: 0rem;
+        min-height: auto;
+
+        &_content {
+            width: 70%;
+            margin: 0rem 0 2rem 3rem;
+
+            h1 {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .circle_container {
+                .checkmark {
+                    font-size: 1.25rem;
+                }
+            }
+            #error_message {
+                font-size: 1.25rem;
+            }
+        }
+
+        &_assets {
+            width: calc(77%);
+            margin: 0 0 3rem 3rem;
+            height: auto;
+
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+                border-radius: 12px;
+            }
+        }
+    }
+}

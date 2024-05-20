@@ -1,0 +1,202 @@
+@use 'base' as *;
+
+#preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: $secondary-color;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+#loader {
+    border: 8px solid $secondary-color;
+    border-top: 8px solid $main-color;
+    border-radius: 50%;
+    width: 3.75rem;
+    height: 3.75rem;
+    animation: spin 2s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -30px;
+    margin-left: -30px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.header {
+    @include navSpacing();
+
+    p {
+        font-family: $font-open_sans;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: $main-color;
+    }
+
+    a {
+        text-decoration: none;
+        color: $main-color;
+    }
+}
+
+ // Buttons
+ .general_style_button {
+    align-items: center;
+    background-color: transparent;
+    border-radius: 6.25rem;
+    box-sizing: border-box;
+    color: $main-color;
+    font-size: 1.125rem;
+    font-weight: 600;
+    font-family: $font-open_sans;
+    justify-content: center;
+    max-width: 12.50rem;
+    min-height: 3.135rem;
+    overflow: hidden;
+    padding: 0px 1.25rem;
+    text-align: center;
+    touch-action: manipulation;
+    transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    vertical-align: middle;
+
+    a {
+        color: $main-color;
+    }
+
+    &:hover, &:focus {
+        background-color: $hover-accent-color;
+    }
+    &:active {
+        background-color: $hover-accent-color;
+    }
+    &:disabled {
+        cursor: not-allowed;
+        background-color: rgba(0, 0, 0, .08);
+        color: rgba(0, 0, 0, .3); 
+    }
+}
+
+// Answer checkboxes
+
+
+// Footer
+footer {
+    @include displayFlex(row, start, start);
+    padding: 4rem 8.50rem;
+    background: linear-gradient(205deg, #222222, #3c3c3c);
+
+    h1, h2, p, a {
+        color: $secondary-color;
+    }
+
+    h2 {
+        font-family: $font-raleway;
+        font-weight: 600;
+        font-size: 1.4rem;
+    }
+
+    p {
+        font-family: $font-open_sans;
+        font-weight: 400;
+        padding-top: 1rem;
+        font-size: 1.125rem;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .divider {
+        width: 0.1rem;
+        background-color: $secondary-color;
+        margin: 0 0.3rem; 
+    }
+
+    .left {
+        width: calc(30% - 0.3rem);
+        padding-right: 4rem;
+
+        h1, span {
+            font-family: $font-raleway;
+            font-weight: 600;
+            color: $secondary-color;
+        }
+
+        span {
+            color: $accent-color;
+        }
+
+    }
+
+    .right {
+        @include displayFlex(row, space-around, start);
+        width: calc(70% - 0.3rem);
+
+        div {
+            margin-left: 4rem;
+        }
+    }
+}
+
+
+// Media queries
+@media only screen and (min-width: 768px) and (max-width: 1365px) {
+    footer {
+        @include displayFlex(column, start, start);
+        padding: 3rem 6.50rem;
+    
+        .left {
+            width: 100%;
+            padding: 0rem;
+        }
+    
+        .right {
+            width: 100%;
+    
+            div {
+                margin: 4rem 0 0 0;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .header {
+        margin: 0 2.5rem;
+
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    .general_style_button {
+        font-size: 1rem;
+        min-height: 2.5rem;
+        padding: 0.5rem 1rem;
+    }
+
+    footer {
+        @include displayFlex(column, start, start);
+        padding: 2rem 2.5rem;
+    
+        .left {
+            width: 100%;
+            padding: 0rem;
+        }
+    
+        .right {
+            @include displayFlex(column, center, start);
+            width: 100%;
+    
+            div {
+                margin: 2.5rem 0 0 0;
+            }
+        }
+    }
+}
