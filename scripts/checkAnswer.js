@@ -13,31 +13,31 @@ document.addEventListener('DOMContentLoaded', function () {
           switch (question.dataset.answer) {
             // Question 1
             case 'yes_1':
-              window.location.href = '/html/uitkomsten/uitkomst1.html';
+              window.location.href = '../../html/uitkomsten/uitkomst1.html';
               break;
             case 'no_1':
-              window.location.href = '/html/vragen/vraag2.html';
+              window.location.href = '../../html/vragen/vraag2.html';
               break;
             // Question 2  
             case 'yes_2':
-                window.location.href = '/html/vragen/vraag3.html';
+                window.location.href = '../../html/vragen/vraag3.html';
                 break;
             case 'no_2':
-                window.location.href = '/html/vragen/vraag4.html';
+                window.location.href = '../../html/vragen/vraag4.html';
                 break;  
             // Question 3
             case 'yes_3':
-                window.location.href = '/html/uitkomsten/uitkomst3.html';
+                window.location.href = '../../html/uitkomsten/uitkomst3.html';
                 break;
             case 'no_3':
-                window.location.href = '/html/uitkomsten/uitkomst4.html';
+                window.location.href = '../../html/uitkomsten/uitkomst4.html';
                 break; 
             // Question 4
             case 'yes_4':
-                window.location.href = '/html/uitkomsten/uitkomst2.html';
+                window.location.href = '../../html/uitkomsten/uitkomst2.html';
                 break;
             case 'no_4':
-                window.location.href = '/html/uitkomsten/uitkomst4.html';
+                window.location.href = '../../html/uitkomsten/uitkomst4.html';
                 break;     
             default:
                 console.error('Er is iets foutgelopen probeer opnieuw!');
