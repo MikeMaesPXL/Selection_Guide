@@ -57,6 +57,27 @@
 
 
 // Media queries
+@media only screen and (min-width: 1921px) {
+    .contact {
+        &_content {
+            margin-bottom: 6rem;
+    
+            h1 {
+                font-size: 9rem;
+                margin-bottom: 1rem;
+            }
+    
+            h2 {
+                font-size: 4rem;
+            }
+    
+            p {
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
 @media only screen and (min-width: 768px) and (max-width: 1365px) {
     .contact {
         @include displayFlex(column, start, center);

@@ -38,8 +38,6 @@
     &_assets {
         @include displayFlex(row, center, center);
         width: calc(50%);
-        // border: 3px solid $main-color;
-        // border-radius: 15px;
         margin: 0 6rem 3rem 0;
         height: auto;
 
@@ -47,12 +45,26 @@
             object-fit: cover;
             width: 80%;
             height: 80%;
-            // border-radius: 12px;
         }
     }
 }
 
 // Media queries
+@media only screen and (min-width: 1921px) {
+    .wrapper_right {
+        gap: 0rem;
+    
+        &_content {
+            h1 {
+                font-size: 6.5rem;
+            }
+            p {
+                font-size: 1.75rem;
+            }
+        }
+    }
+}
+
 @media only screen and (min-width: 768px) and (max-width: 1365px) {
     .wrapper_right {
         @include displayFlex(column, center, center);

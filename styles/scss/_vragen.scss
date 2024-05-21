@@ -33,7 +33,9 @@
             }
 
             .checkmark {
+                font-family: $font-open_sans;
                 font-size: 1.75rem;
+                font-weight: 600;
             }
         }
         .button_wrapper {
@@ -68,6 +70,32 @@
 }
 
 // Media queries
+@media only screen and (min-width: 1921px) {
+    .wrapper_left {
+        &_content {
+            gap: 1.5rem;
+    
+            h1 {
+                font-size: 6.5rem;
+            }
+            .circle_container {
+                gap: 1.5rem;
+    
+                .checkmark {
+                    font-family: $font-open_sans;
+                    font-size: 1.75rem;
+                    font-weight: 600;
+                }
+            }
+            #error_message {
+                font-family: $font-open_sans;
+                font-size: 1.75rem;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
 @media only screen and (min-width: 768px) and (max-width: 1365px) {
     .wrapper_left {
         @include displayFlex(column, center, start);
