@@ -37,9 +37,11 @@
 
 .about {
     @include displayFlex(row, start, center);
-    gap: 12rem;
+    // margin: 0rem 6rem;
 
     &_container {
+        width: 60%;
+
         margin: 7.50rem 0rem;
     
         p {
@@ -67,6 +69,17 @@
         }
     }
 
+    &_asset {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 50%;
+            height: 50%;
+        }
+    }
+
     // &_text_wrapper {
     //     p {
     //         font-family: $font-open_sans;
@@ -91,7 +104,7 @@
 }
 
 .characters {
-    margin: 7.50rem 0rem;
+    margin: 7.50rem 6rem;
 
     &_title {
         font-family: $font-raleway;
@@ -246,6 +259,8 @@
     }
 
     .characters {
+        margin: 0rem 0rem;
+
         &_title {
             font-size: 6rem;
             margin: 6rem 0 0 6rem;

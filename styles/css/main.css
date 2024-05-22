@@ -67,6 +67,7 @@ body {
   align-items: center;
   margin: 0 6rem;
   min-height: 15vh;
+  margin: 0rem 8rem;
 }
 .header a {
   text-decoration: none;
@@ -176,6 +177,9 @@ footer .right div {
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1365px) {
+  .header {
+    margin: 0rem 6rem;
+  }
   footer {
     display: flex;
     flex-direction: column;
@@ -269,9 +273,9 @@ footer .right div {
   flex-direction: row;
   justify-content: start;
   align-items: center;
-  gap: 12rem;
 }
 .about_container {
+  width: 60%;
   margin: 7.5rem 0rem;
 }
 .about_container p {
@@ -295,9 +299,18 @@ footer .right div {
   font-style: italic;
   color: #222222;
 }
+.about_asset {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about_asset img {
+  width: 50%;
+  height: 50%;
+}
 
 .characters {
-  margin: 7.5rem 0rem;
+  margin: 7.5rem 6rem;
 }
 .characters_title {
   font-family: "Raleway", sans-serif;
@@ -408,6 +421,9 @@ footer .right div {
   }
   .about_text_wrapper {
     display: none;
+  }
+  .characters {
+    margin: 0rem 0rem;
   }
   .characters_title {
     font-size: 6rem;
