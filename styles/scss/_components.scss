@@ -32,16 +32,22 @@
 .header {
     @include navSpacing();
 
-    p {
-        font-family: $font-open_sans;
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: $main-color;
-    }
+    // p {
+    //     font-family: $font-open_sans;
+    //     font-size: 1.5rem;
+    //     font-weight: 700;
+    //     color: $main-color;
+    // }
 
     a {
         text-decoration: none;
         color: $main-color;
+    }
+
+    .logo {
+        width: 50%rem;
+        height: 5rem;
+        // border: 1px solid red;
     }
 }
 

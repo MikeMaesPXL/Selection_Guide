@@ -6,6 +6,7 @@
     width: 100%;
     min-height: 85vh;
     gap: 6rem;
+    // margin-bottom: 3rem; this was margin if assets dissapear
 
     &_content {
         @include displayFlex(column, center, start);
@@ -52,21 +53,21 @@
         }
     }
 
-    &_assets {
-        @include displayFlex(row, center, center);
-        width: calc(50%);
-        border: 3px solid $main-color;
-        border-radius: 15px;
-        margin: 0 6rem 3rem 0;
-        height: auto;
+    // &_assets {
+    //     @include displayFlex(row, center, center);
+    //     width: calc(50%);
+    //     // border: 3px solid $main-color;
+    //     border-radius: 15px;
+    //     margin: 0 6rem 3rem 0;
+    //     height: auto;
 
-        img {
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
-            border-radius: 12px;
-        }
-    }
+    //     img {
+    //         object-fit: cover;
+    //         width: 100%;
+    //         height: 100%;
+    //         border-radius: 12px;
+    //     }
+    // }
 }
 
 // Media queries
