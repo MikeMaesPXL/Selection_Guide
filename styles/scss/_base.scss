@@ -55,3 +55,15 @@ body {
     margin: 0 6rem;
     min-height: 15vh;
 }
+
+@mixin paragraphStyle($font-size: 1.75rem, $font-weight: 400) {
+    font-family: $font-open_sans;
+    font-weight: $font-weight;
+    font-size: $font-size;
+}
+
+@mixin titleStyle($font-title: 7rem, $font-weight: 700) {
+    font-family: $font-raleway;
+    font-weight: $font-weight;
+    font-size: $font-title;
+}

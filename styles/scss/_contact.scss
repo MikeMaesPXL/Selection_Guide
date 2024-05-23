@@ -9,16 +9,12 @@
         margin-bottom: 6rem;
 
         h1 {
-            font-size: 8rem;
-            font-family: $font-raleway;
-            font-weight: 700;
+            @include titleStyle(8rem);
             margin-bottom: 1rem;
         }
 
         h2 {
-            font-size: 3rem;
-            font-family: $font-raleway;
-            font-weight: 700;
+            @include titleStyle(3rem);
             text-decoration: underline;
             color: $accent-color;
             background-color: $main-color;
@@ -26,9 +22,7 @@
         }
 
         p {
-            font-size: 1.75rem;
-            font-family: $font-open_sans;
-            font-weight: 400;
+            @include paragraphStyle();
         }
 
         &_left {
@@ -67,16 +61,16 @@
             margin-bottom: 6rem;
     
             h1 {
-                font-size: 9rem;
+                @include titleStyle(9rem);
                 margin-bottom: 1rem;
             }
     
             h2 {
-                font-size: 4rem;
+                @include titleStyle(4rem);
             }
     
             p {
-                font-size: 2rem;
+                @include paragraphStyle(2rem);
             }
         }
     }
@@ -93,9 +87,9 @@
             margin-bottom: 0rem;
     
             &_left {
+                @include displayFlex(column, center, center);
                 width: 80%;
                 margin-right: 0rem;
-                @include displayFlex(column, center, center);
                 text-align: center;
                 
                 p {
@@ -106,9 +100,9 @@
             }
     
             &_right {
+                @include displayFlex(column, center, center);
                 width: 80%;
                 margin: 0 0 6rem 0;
-                @include displayFlex(column, center, center);
     
                 h2 {
                     margin: 6rem 0rem 0.5rem 0;
@@ -133,23 +127,23 @@
             margin-bottom: 3rem;
 
             h1 {
-                font-size: 5rem;
+                @include titleStyle(5rem);
                 margin: 0rem;
                 text-align:center;
             }
     
             h2 {
-                font-size: 1.75rem;
+                @include titleStyle(1.75rem);
             }
     
             p {
-                font-size: 1.25rem;
+                @include paragraphStyle(1.25rem);
             }
     
             &_left {
+                @include displayFlex(column, center, center);
                 width: 80%;
                 margin-right: 0rem;
-                @include displayFlex(column, center, center);
                 
                 p {
                     width: 80%;
@@ -159,15 +153,15 @@
             }
     
             &_right {
+                @include displayFlex(column, center, center);
                 width: 80%;
                 margin-left: 0rem;
-                @include displayFlex(column, center, center);
     
                 h2 {
                     margin: 3rem 0rem 0.5rem 0;
                 }
                 p {
-                    font-size: 1rem;
+                    @include paragraphStyle(1rem);
                     text-align: center;
                 }
             }

@@ -40,28 +40,23 @@
 
     &_container {
         width: 60%;
-
         margin: 7.50rem 0rem;
     
         p {
+            @include paragraphStyle();
             width: 43.75rem;
             color: $main-color;
-            font-family: $font-open_sans;
-            font-weight: 400;
-            font-size: 1.75rem;
             margin: 2rem 0 0 16.25rem;
         }
     
         &_title_1 {
-            font-family: $font-raleway;
-            font-size: 7rem;
+            @include titleStyle();
             margin: 0 0 0 8.75rem;
             text-shadow: -0.63rem -0.63rem 0.20rem #22222230;
         }
         
         &_title_2 {
-            font-family: $font-raleway;
-            font-size: 7rem;
+            @include titleStyle();
             margin: 0 0 0 15rem;
             font-style: italic;
             color: $main-color;
@@ -84,8 +79,7 @@
     margin: 7.50rem 6rem;
 
     &_title {
-        font-family: $font-raleway;
-        font-size: 7rem;
+        @include titleStyle();
         margin: 0 0 0 8.75rem;
     }
 
@@ -110,7 +104,7 @@
             }
 
             h1 {
-                
+                @include titleStyle(2rem);
             }
         }
     }
@@ -122,10 +116,10 @@
     .landing {
         &_content {
             h1 {
-                font-size: 14rem;
+                @include titleStyle(14rem);
             }
             p {
-                font-size: 3rem;
+                @include paragraphStyle(3rem);
             }
         }
     }
@@ -133,22 +127,22 @@
     .about {
         &_container {
             p {
-                font-size: 2rem;
+                @include paragraphStyle(2rem);
             }
         
             &_title_1 {
-                font-size: 8rem;
+                @include titleStyle(8rem);
             }
             
             &_title_2 {
-                font-size: 8rem;
+                @include titleStyle(8rem);
             }
         }
     }
 
     .characters {
         &_title {
-            font-size: 8rem;
+            @include titleStyle(8rem);
         }
     
         &_wrapper {
@@ -163,6 +157,7 @@
                 border-bottom: 4px solid black;
 
                 h1 {
+                    @include titleStyle(3rem);
                     margin-top: 0.25rem;
                 }
             }
@@ -199,18 +194,18 @@
             margin: 0 0 6rem 6rem;
         
             p {
+                @include paragraphStyle(1.5rem);
                 width: 90%;
-                font-size: 1.5rem;
                 margin: 2rem 0 0 0;
             }
         
             &_title_1 {
-                font-size: 6rem;
+                @include titleStyle(6rem);
                 margin: 6rem 0 0 0rem;
             }
             
             &_title_2 {
-                font-size: 6rem;
+                @include titleStyle(6rem);
                 margin: 0 0 0 0rem;
             }
         }
@@ -227,7 +222,7 @@
         margin: 0rem 0rem;
 
         &_title {
-            font-size: 6rem;
+            @include titleStyle(6rem);
             margin: 6rem 0 0 6rem;
         }
     
@@ -236,14 +231,6 @@
             gap: 6rem;
             padding: 4rem 0;
             margin-bottom: 4rem;
-
-            h1 {
-                display: block;
-                font-size: 2.5rem;
-                font-family: $font-open_sans;
-                font-weight: 700;
-                margin-top: 0.25rem;
-            }
     
             .box {
                 @include displayFlex(column, center, center);
@@ -253,6 +240,12 @@
                 img {
                     width: 100%;
                     height: 100%;
+                }
+
+                h1 {
+                    @include titleStyle(3rem);
+                    display: block;
+                    margin-top: 0.25rem;
                 }
             }
         }
@@ -272,12 +265,12 @@
             }
 
             h1 {
-                font-size: 4rem;
+                @include titleStyle(4rem);
                 line-height: 5rem;
             }
     
             p {
-                font-size: 1.5rem;
+                @include paragraphStyle(1.5rem);
                 margin-top: 2rem;
             }
     
@@ -300,21 +293,22 @@
             }
         
             p {
+                @include paragraphStyle(1.5rem);
                 width: 90%;
-                font-size: 1.5rem;
                 margin: 2rem 0 0 0;
             }
         
             &_title_1 {
-                font-size: 3rem;
+                @include titleStyle(3rem);
             }
             
             &_title_2 {
-                font-size: 3rem;
+                @include titleStyle(3rem);
             }
         }
 
         &_asset {
+            display: none;
             img {
                 width: 80%;
                 height: 80%;
@@ -327,8 +321,8 @@
         margin: 0rem 0rem;
 
         &_title {
+            @include titleStyle(3rem);
             width: 80%;
-            font-size: 3rem;
             margin: 6rem 0 0 2rem;
         }
     
@@ -337,17 +331,17 @@
             gap: 2rem;
             padding: 4rem 0;
             margin-bottom: 0rem;
-
-            h1 {
-                display: block;
-                font-size: 2rem;
-                margin-top: 0.25rem;
-            }
     
             .box {
                 @include displayFlex(column, center, center);
                 width: 20rem;
                 height: 30rem;
+
+                h1 {
+                    @include titleStyle(2rem);
+                    display: block;
+                    margin-top: 0.25rem;
+                }
     
                 img {
                     width: 100%;

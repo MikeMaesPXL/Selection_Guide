@@ -14,16 +14,12 @@
         gap: 1rem;
 
         h1 {
-            font-size: 5.5rem;
-            font-family: $font-raleway;
-            font-weight: 700;
+            @include titleStyle(5.5rem);
             margin-bottom: 3rem;
         }
 
         p {
-            font-size: 1.5rem;
-            font-family: $font-open_sans;
-            font-weight: 400;
+            @include paragraphStyle(1.5rem);
         }
 
         .button_wrapper {
@@ -56,10 +52,10 @@
     
         &_content {
             h1 {
-                font-size: 6.5rem;
+                @include titleStyle(6.5rem);
             }
             p {
-                font-size: 1.75rem;
+                @include paragraphStyle();
             }
         }
     }
@@ -76,7 +72,7 @@
             margin: 0 0 6rem 0;
 
             h1 {
-                font-size: 3.5rem;
+                @include titleStyle(3.5rem);
             }
         }
 
@@ -105,11 +101,11 @@
             margin: 0rem 0 2rem 0;
 
             h1 {
-                font-size: 2.5rem;
+                @include titleStyle(2.5rem);
                 margin-bottom: 1rem;
             }
             p {
-                font-size: 1rem;
+                @include paragraphStyle(1rem);
             }
             .button_wrapper {
                 margin-top: 1rem;

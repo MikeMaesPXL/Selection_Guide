@@ -27,17 +27,17 @@ document.addEventListener('DOMContentLoaded', function () {
                 break;  
             // Question 3
             case 'yes_3':
-                window.location.href = '../../html/uitkomsten/uitkomst3.html';
+                window.location.href = '../../html/collectEmails/collectEmails3.html';
                 break;
             case 'no_3':
-                window.location.href = '../../html/uitkomsten/uitkomst4.html';
+                window.location.href = '../../html/collectEmails/collectEmails4.html';
                 break; 
             // Question 4
             case 'yes_4':
-                window.location.href = '../../html/uitkomsten/uitkomst2.html';
+                window.location.href = '../../html/collectEmails/collectEmails2.html';
                 break;
             case 'no_4':
-                window.location.href = '../../html/uitkomsten/uitkomst4.html';
+                window.location.href = '../../html/collectEmails/collectEmails4.html';
                 break;     
             default:
                 console.error('Er is iets foutgelopen probeer opnieuw!');

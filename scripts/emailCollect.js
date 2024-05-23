@@ -8,6 +8,7 @@ document.getElementById('details_form').addEventListener('submit', function(even
     const email = document.getElementById('email').value;
     const bericht = document.getElementById('bericht').value;
     const publilemon_email = 'publilemonquiz@gmail.com';
+    const solutionNumber = document.getElementById('solution_number').value;
 
     if (email && bericht) {
         const serviceID = 'service_a8bbx3a'; // EmailJS service ID
@@ -23,11 +24,11 @@ document.getElementById('details_form').addEventListener('submit', function(even
             .then(function(response) {
                 console.log('SUCCESS!', response.status, response.text);
                 alert('We hebben jouw bericht ontvangen!');
-                window.location.href = '../../html/uitkomsten/uitkomst1.html';
+                window.location.href = `../../html/uitkomsten/uitkomst${solutionNumber}.html`;
             }, function(error) {
                 console.log('Jouw bericht is niet verzonden...', error);
                 alert('Jouw bericht is niet verzonden...');
-                window.location.href = '../../html/uitkomsten/uitkomst1.html'
+                window.location.href = `../../html/uitkomsten/uitkomst${solutionNumber}.html`;
             });
     }
 });
