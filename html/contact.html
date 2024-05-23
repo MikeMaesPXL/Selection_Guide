@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John Lemon</title>
+    <title>Contact</title>
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="../../styles/css/main.css">
+    <link rel="stylesheet" href="../styles/css/main.css">
 
     <!-- JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="../../scripts/checkAnswer.js"></script>
 
 </head>
 <body>
@@ -18,27 +17,25 @@
 
     <div class="header">
         <div class="header_logo">
-            <a href="../../index.html"><img class="logo" src="../../assets/logo.png" alt="Logo"></a>
+            <a href="../index.html"><img class="logo" src="../assets/logo.png" alt="Logo"></a>
         </div>
         <div class="header_contact">
-            <a href="../../html/contact.html"><button class="general_style_button" role="button">CONTACT</button></a>
+            <a href="../html/contact.html"><button class="general_style_button" role="button">CONTACT</button></a>
         </div>
     </div>
 
-    <div class="wrapper_right">
-        <div class="wrapper_right_assets">
-            <img src="../../assets/leminem_resize.png" alt="an image">
-        </div>
-        <div class="wrapper_right_content">
-            <h1>Je bent een Leminem!</h1>
-            <p>Je bent een lorem ipsum lorem ipsum ipsum lorem lorem lorem ipsum!
-                Je bent een lorem ipsum lorem ipsum ipsum lorem lorem lorem ipsum!
-                Je bent een lorem ipsum lorem ipsum ipsum lorem lorem lorem ipsum!
-            </p>
-            <div class="button_wrapper">
-                <a href="../../index.html"><button class="general_style_button" type="button">HOME</button></a>
-                <a><button class="general_style_button" type="button"></button></a>
-            </div>    
+    <div class="contact">
+        <div class="contact_content">
+            <div class="contact_content_left">
+                <h1>Zeg Hallo!</h1>
+                <p>Heb je nog vragen of wil je graag kennismaken? Aarzel niet en geef ons een squeeze!</p>
+            </div>
+            <div class="contact_content_right">
+                <h2 id="email_click">hello@publilemon.be</h2>
+                <p>Weg op Bree 23/1</p>
+                <p>3670 Oudsbergen</p>
+                <p>+32 (0) 11 79 24 43</p>
+            </div>
         </div>
     </div>
 
@@ -57,8 +54,8 @@
         <div class="right">
             <div class="explore">
                 <h2>Ontdek</h2>
-                <p><a href="../../index.html">Home</a></p>
-                <p><a href="../contact.html">Contact</a></p>
+                <p><a href="../index.html">Home</a></p>
+                <p><a href="#">Contact</a></p>
             </div>
             <div class="visit">
                 <h2>Bezoek ons</h2>
@@ -80,13 +77,14 @@
             </div>
         </div>
     </footer>
-    
-     <!-- Gsap -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
- 
-     <!-- scripts -->
-     <script src="../../scripts/gsap.js"></script>
-     <script src="../../scripts/customCursor.js"></script>
+
+    <!-- Gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- scripts -->
+    <script src="../scripts/gsap.js"></script>
+    <script src="../scripts/customCursor.js"></script>
+    <script src="../scripts/openEmail.js"></script>
 </body>
 </html>
