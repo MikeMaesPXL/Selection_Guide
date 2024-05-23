@@ -19,6 +19,10 @@
             font-size: 3rem;
             font-family: $font-raleway;
             font-weight: 700;
+            text-decoration: underline;
+            color: $accent-color;
+            background-color: $main-color;
+            padding: 1rem 0.5rem;
         }
 
         p {

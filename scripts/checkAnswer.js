@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
           switch (question.dataset.answer) {
             // Question 1
             case 'yes_1':
-              window.location.href = '../../html/uitkomsten/uitkomst1.html';
+              window.location.href = '../../html/collectEmails/collectEmails1.html';
               break;
             case 'no_1':
               window.location.href = '../../html/vragen/vraag2.html';

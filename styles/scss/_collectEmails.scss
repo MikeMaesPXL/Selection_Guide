@@ -1,0 +1,52 @@
+@use 'base' as *;
+
+.collect_page {
+    @include displayFlex(row, center, center);
+    height: 85svh;
+
+    .form_container {
+        // @include displayFlex(column, center, start);
+        padding: 2rem;
+        border-radius: 0.75rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+
+        gap: 1rem;
+        border: 1px solid red;
+
+        #details_form {
+            @include displayFlex(column, center, start);
+            gap: 0.5rem;
+
+        }
+
+        h1 {
+            color: $main-color;
+            margin-bottom: 20px;
+          }
+        
+        p {
+        color: $main-color;
+        margin-bottom: 20px;
+        }
+    
+        label {
+        color: $main-color;
+        display: block;
+        margin-bottom: 10px;
+        text-align: left;
+        }
+    
+        input[type="email"],
+        textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: 1px solid $main-color;
+        background-color: $secondary-color;
+        color: $main-color;
+        box-sizing: border-box;
+        }
+    }
+}

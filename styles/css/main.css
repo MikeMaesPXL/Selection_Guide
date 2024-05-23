@@ -653,6 +653,54 @@ footer .right div {
     border-radius: 12px;
   }
 }
+.collect_page {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 85svh;
+}
+.collect_page .form_container {
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  gap: 1rem;
+  border: 1px solid red;
+}
+.collect_page .form_container #details_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 0.5rem;
+}
+.collect_page .form_container h1 {
+  color: #222222;
+  margin-bottom: 20px;
+}
+.collect_page .form_container p {
+  color: #222222;
+  margin-bottom: 20px;
+}
+.collect_page .form_container label {
+  color: #222222;
+  display: block;
+  margin-bottom: 10px;
+  text-align: left;
+}
+.collect_page .form_container input[type=email],
+.collect_page .form_container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #222222;
+  background-color: #EEEEEE;
+  color: #222222;
+  box-sizing: border-box;
+}
+
 .wrapper_right {
   display: flex;
   flex-direction: row;
@@ -803,6 +851,10 @@ footer .right div {
   font-size: 3rem;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
+  text-decoration: underline;
+  color: #FFC925;
+  background-color: #222222;
+  padding: 1rem 0.5rem;
 }
 .contact_content p {
   font-size: 1.75rem;

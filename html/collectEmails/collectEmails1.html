@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lemon Peeling</title>
+    <title>Jouw info</title>
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="../../styles/css/main.css">
 
     <!-- JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 </head>
 <body>
@@ -24,20 +27,19 @@
         </div>
     </div>
 
-    <div class="wrapper_right">
-        <div class="wrapper_right_assets">
-            <img src="../../assets" alt="an image">
-        </div>
-        <div class="wrapper_right_content">
-            <h1>Je bent een <br> Lemon Peeler</h1>
-            <p>Online sta je al sterk in de kijker maar je kan nog hulp gebruiken
-                buiten het online gebeuren, onze lemon peelers leren via een leuke workshop 
-                hoe je je bedrijf nog kan laten groeien!
+    <div class="collect_page">
+        <div class="form_container">
+            <h1>Information</h1>
+            <p>Laat hieronder even je e-mail achter om zo ons even te laten weten dat je het hebt ingevuld!
+                Bij het bericht mag je altijd 
             </p>
-            <div class="button_wrapper">
-                <a href="../../index.html"><button class="general_style_button" type="button">HOME</button></a>
-                <a><button class="general_style_button" type="button"></button></a>
-            </div>    
+            <form id="details_form">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="bericht">Bericht:</label>
+                <textarea id="bericht" name="bericht"></textarea>
+                <a href="../uitkomsten/uitkomst1.html"><button id="next_button" class="general_style_button" type="submit">VERSTUREN</button></a>
+            </form>
         </div>
     </div>
 
@@ -79,7 +81,7 @@
             </div>
         </div>
     </footer>
-    
+
      <!-- Gsap -->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
@@ -87,6 +89,6 @@
      <!-- scripts -->
      <script src="../../scripts/gsap.js"></script>
      <script src="../../scripts/customCursor.js"></script>
-     <script src="../../scripts/checkAnswer.js"></script>
+     <script src="../../scripts/emailCollect.js"></script>
 </body>
 </html>
