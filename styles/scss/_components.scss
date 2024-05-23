@@ -55,7 +55,8 @@
  // Buttons
  .general_style_button {
     align-items: center;
-    background-color: transparent;
+    // background-color: transparent;
+    background-color: $secondary-color;
     border-radius: 6.25rem;
     box-sizing: border-box;
     color: $main-color;
@@ -76,12 +77,12 @@
         color: $main-color;
     }
 
-    &:hover, &:focus {
-        background-color: $hover-accent-color;
-    }
-    &:active {
-        background-color: $hover-accent-color;
-    }
+    // &:hover, &:focus {
+    //     background-color: $hover-accent-color;
+    // }
+    // &:active {
+    //     background-color: $hover-accent-color;
+    // }
     &:disabled {
         cursor: not-allowed;
         background-color: rgba(0, 0, 0, .08);

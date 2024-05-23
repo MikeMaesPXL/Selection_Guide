@@ -10,6 +10,9 @@
 
     <!-- JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
+    <!-- API -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     
 </head>
 <body>
@@ -24,16 +27,19 @@
         </div>
     </div>
 
-    <div class="introduction">
-        <div class="introduction_content">
-            <h1>Introductie van onze gids!</h1>
-            <p>Ben je een starter of heb je al een sterke basis? Ben je benieuwd naar welk karakter het beste bij jouw bedrijf past? Neem dan zeker even onze korte quiz door
-                om te zien waar binnen je bedrijf je nog kan groeien! 
-                <br><br>
-                Klaar om te zien wat jouw bedrijf nodig heeft?</p>
-            <a href="../html/user_info.html"><button class="general_style_button" type="button">START GIDS</button></a>
-        </div>
-    </div>
+    <div class="form_wrapper">
+        <form action="submit.php" method="POST">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="description">Description:</label>
+            <textarea name="description" id="description" required></textarea>
+
+            <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
+
+            <a href="../html/vragen/vraag1.html"><button type="submit">Begin!</button></a>
+        </form>
+    </div>    
 
     <footer>
         <div class="left">

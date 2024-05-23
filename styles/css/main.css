@@ -80,7 +80,7 @@ body {
 
 .general_style_button {
   align-items: center;
-  background-color: transparent;
+  background-color: #EEEEEE;
   border-radius: 6.25rem;
   box-sizing: border-box;
   color: #222222;
@@ -99,12 +99,6 @@ body {
 }
 .general_style_button a {
   color: #222222;
-}
-.general_style_button:hover, .general_style_button:focus {
-  background-color: #ffca1d;
-}
-.general_style_button:active {
-  background-color: #ffca1d;
 }
 .general_style_button:disabled {
   cursor: not-allowed;
@@ -622,6 +616,10 @@ footer .right div {
     margin-bottom: 3rem;
   }
 }
+.form_wrapper {
+  height: 85vh;
+}
+
 .wrapper_left {
   display: flex;
   flex-direction: row;
