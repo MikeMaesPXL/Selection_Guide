@@ -1,42 +1,60 @@
 @use 'base' as *;
 
 .landing {
-    @include displayFlex(row, start, center);
+    @include displayFlex(row, center, center);
     min-height: 85vh;
 
     &_content {
-        @include displayFlex(column, center, start);
-        margin-bottom: 6rem;
+        @include displayFlex(column, center, center);
 
         h1, p {
-            margin-left: 8.75rem;
             color: $main-color;
         }
 
         h1 {
-            font-family: $font-raleway;
-            font-weight: 600;
-            font-size: 8.88rem;
+            @include titleStyle(8rem, 600);
             line-height: 9rem;
             text-shadow: 2px 2px 2px $main-color;
         }
 
         p {
-            font-family: $font-open_sans;
-            font-weight: 400;
-            font-style: italic;
-            font-size: 2.25rem;
+            @include paragraphStyle(2.25rem);
             margin-top: 2rem;
+            font-style: italic;
+            text-align: center;
         }
 
         .start_guide_button {
-            margin: 3rem 0 0 8.75rem;
+            margin-top: 3rem;
+        }
+
+        .scroll_reminder {
+            margin-top: 4rem;
+            animation: bounce 2s infinite;
+
+            .arrow {
+                width: 10rem;
+                height: 10rem;
+            }
+
+            @keyframes bounce {
+                0%, 20%, 50%, 80%, 100% {
+                    transform: translateY(0);
+                }
+                40% {
+                    transform: translateY(10px);
+                }
+                60% {
+                    transform: translateY(5px);
+                }
+            }
         }
     }
 }
 
 .about {
     @include displayFlex(row, start, center);
+    margin: 3rem 0;
 
     &_container {
         width: 60%;
@@ -75,51 +93,38 @@
     }
 }
 
-.characters {
-    margin: 7.50rem 6rem;
-
-    &_title {
-        @include titleStyle();
-        margin: 0 0 0 8.75rem;
-    }
-
-    &_wrapper {
-        @include displayFlex(row, space-around, start);
-        padding: 4rem 0;
-        margin-bottom: 0 auto;
-
-        .box {
-            @include displayFlex(column, center, center);
-            position: relative;
-            width: 22rem;
-            height: 28rem;
-            overflow: hidden;
-            border-bottom: 2px solid black;
-
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                background-position: center;
-            }
-
-            h1 {
-                @include titleStyle(2rem);
-            }
-        }
-    }
-}
-
 
 // Media queries
 @media only screen and (min-width: 1921px) {
     .landing {
         &_content {
             h1 {
-                @include titleStyle(14rem);
+                @include titleStyle(12rem);
             }
             p {
+                margin-top: 4rem;
                 @include paragraphStyle(3rem);
+            }
+            .scroll_reminder {
+                margin-top: 4rem;
+                animation: bounce 2s infinite;
+    
+                .arrow {
+                    width: 15rem;
+                    height: 15rem;
+                }
+    
+                @keyframes bounce {
+                    0%, 20%, 50%, 80%, 100% {
+                        transform: translateY(0);
+                    }
+                    40% {
+                        transform: translateY(10px);
+                    }
+                    60% {
+                        transform: translateY(5px);
+                    }
+                }
             }
         }
     }
@@ -139,30 +144,6 @@
             }
         }
     }
-
-    .characters {
-        &_title {
-            @include titleStyle(8rem);
-        }
-    
-        &_wrapper {
-            padding: 4rem 0;
-            margin: 0 auto;
-    
-            .box {
-                @include displayFlex(column, center, center);
-                width: 30rem;
-                height: 40rem;
-                border-radius: 3px;
-                border-bottom: 4px solid black;
-
-                h1 {
-                    @include titleStyle(3rem);
-                    margin-top: 0.25rem;
-                }
-            }
-        }
-    }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1365px) {
@@ -171,22 +152,49 @@
     
         &_content {
             @include displayFlex(column, center, start);
-            margin: 6rem 0 6rem 6rem;
+            margin: 6rem 6rem 6rem 6rem;
     
             h1, p {
-                width: 80%;
+                width: 100%;
                 margin-left: 0rem;
                 color: $main-color;
+                text-align: start;
             }
     
             .start_guide_button {
                 margin: 3rem 0 0 0;
+            }
+
+            .scroll_reminder {
+                margin-top: 4rem;
+                animation: bounce 2s infinite;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    
+                .arrow {
+                    width: 13rem;
+                    height: 13rem;
+                }
+    
+                @keyframes bounce {
+                    0%, 20%, 50%, 80%, 100% {
+                        transform: translateY(0);
+                    }
+                    40% {
+                        transform: translateY(10px);
+                    }
+                    60% {
+                        transform: translateY(5px);
+                    }
+                }
             }
         }
     }
 
     .about {
         @include displayFlex(column, center, start);
+        margin: 0rem 0 6rem 0;
 
         &_container {
             width: 80%;
@@ -217,39 +225,6 @@
             }
         }
     }
-
-    .characters {
-        margin: 0rem 0rem;
-
-        &_title {
-            @include titleStyle(6rem);
-            margin: 6rem 0 0 6rem;
-        }
-    
-        &_wrapper {
-            @include displayFlex(column, center, center);
-            gap: 6rem;
-            padding: 4rem 0;
-            margin-bottom: 4rem;
-    
-            .box {
-                @include displayFlex(column, center, center);
-                width: 30rem;
-                height: 40rem;
-    
-                img {
-                    width: 100%;
-                    height: 100%;
-                }
-
-                h1 {
-                    @include titleStyle(3rem);
-                    display: block;
-                    margin-top: 0.25rem;
-                }
-            }
-        }
-    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -262,6 +237,7 @@
             h1, p {
                 width: 100%;
                 margin-left: 0rem;
+                text-align: start;
             }
 
             h1 {
@@ -286,7 +262,7 @@
         &_container {
             width: 80%;
             padding-bottom: 0rem;
-            margin: 6rem 3rem 3rem 3rem;
+            margin: 0rem 3rem 3rem 3rem;
 
             h1 {
                 margin: 0;
@@ -312,41 +288,6 @@
             img {
                 width: 80%;
                 height: 80%;
-            }
-        }
-    }
-
-    .characters {
-        @include displayFlex(column, center, center);
-        margin: 0rem 0rem;
-
-        &_title {
-            @include titleStyle(3rem);
-            width: 80%;
-            margin: 6rem 0 0 2rem;
-        }
-    
-        &_wrapper {
-            @include displayFlex(column, center, center);
-            gap: 2rem;
-            padding: 4rem 0;
-            margin-bottom: 0rem;
-    
-            .box {
-                @include displayFlex(column, center, center);
-                width: 20rem;
-                height: 30rem;
-
-                h1 {
-                    @include titleStyle(2rem);
-                    display: block;
-                    margin-top: 0.25rem;
-                }
-    
-                img {
-                    width: 100%;
-                    height: 100%;
-                }
             }
         }
     }

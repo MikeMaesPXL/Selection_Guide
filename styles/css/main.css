@@ -22,6 +22,36 @@
   z-index: 9999;
 }
 
+@keyframes pulse-animation {
+  0% {
+    transform: scale(1.1);
+    background-color: #ffca1d;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top-right-radius: 0%;
+    border-bottom-left-radius: 0%;
+  }
+  50% {
+    transform: scale(1.25);
+    background-color: #FFC925;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top-right-radius: 0%;
+    border-bottom-left-radius: 0%;
+  }
+  100% {
+    transform: scale(1.1);
+    background-color: #ffca1d;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top-right-radius: 0%;
+    border-bottom-left-radius: 0%;
+  }
+}
+.custom_cursor.pulse {
+  animation: pulse-animation 1s infinite;
+}
+
 body {
   background-color: #f5f5f5;
   overflow-x: hidden;
@@ -206,7 +236,7 @@ footer .right div {
 .landing {
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   min-height: 85vh;
 }
@@ -214,29 +244,47 @@ footer .right div {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
-  margin-bottom: 6rem;
+  align-items: center;
 }
 .landing_content h1, .landing_content p {
-  margin-left: 8.75rem;
   color: #222222;
 }
 .landing_content h1 {
   font-family: "Raleway", sans-serif;
   font-weight: 600;
-  font-size: 8.88rem;
+  font-size: 8rem;
   line-height: 9rem;
   text-shadow: 2px 2px 2px #222222;
 }
 .landing_content p {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  font-style: italic;
   font-size: 2.25rem;
   margin-top: 2rem;
+  font-style: italic;
+  text-align: center;
 }
 .landing_content .start_guide_button {
-  margin: 3rem 0 0 8.75rem;
+  margin-top: 3rem;
+}
+.landing_content .scroll_reminder {
+  margin-top: 4rem;
+  animation: bounce 2s infinite;
+}
+.landing_content .scroll_reminder .arrow {
+  width: 10rem;
+  height: 10rem;
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(10px);
+  }
+  60% {
+    transform: translateY(5px);
+  }
 }
 
 .about {
@@ -244,6 +292,7 @@ footer .right div {
   flex-direction: row;
   justify-content: start;
   align-items: center;
+  margin: 3rem 0;
 }
 .about_container {
   width: 60%;
@@ -282,56 +331,36 @@ footer .right div {
   height: 50%;
 }
 
-.characters {
-  margin: 7.5rem 6rem;
-}
-.characters_title {
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 7rem;
-  margin: 0 0 0 8.75rem;
-}
-.characters_wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: start;
-  padding: 4rem 0;
-  margin-bottom: 0 auto;
-}
-.characters_wrapper .box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: 22rem;
-  height: 28rem;
-  overflow: hidden;
-  border-bottom: 2px solid black;
-}
-.characters_wrapper .box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  background-position: center;
-}
-.characters_wrapper .box h1 {
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 2rem;
-}
-
 @media only screen and (min-width: 1921px) {
   .landing_content h1 {
     font-family: "Raleway", sans-serif;
     font-weight: 700;
-    font-size: 14rem;
+    font-size: 12rem;
   }
   .landing_content p {
+    margin-top: 4rem;
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
     font-size: 3rem;
+  }
+  .landing_content .scroll_reminder {
+    margin-top: 4rem;
+    animation: bounce 2s infinite;
+  }
+  .landing_content .scroll_reminder .arrow {
+    width: 15rem;
+    height: 15rem;
+  }
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(10px);
+    }
+    60% {
+      transform: translateY(5px);
+    }
   }
   .about_container p {
     font-family: "Open Sans", sans-serif;
@@ -348,31 +377,6 @@ footer .right div {
     font-weight: 700;
     font-size: 8rem;
   }
-  .characters_title {
-    font-family: "Raleway", sans-serif;
-    font-weight: 700;
-    font-size: 8rem;
-  }
-  .characters_wrapper {
-    padding: 4rem 0;
-    margin: 0 auto;
-  }
-  .characters_wrapper .box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 30rem;
-    height: 40rem;
-    border-radius: 3px;
-    border-bottom: 4px solid black;
-  }
-  .characters_wrapper .box h1 {
-    font-family: "Raleway", sans-serif;
-    font-weight: 700;
-    font-size: 3rem;
-    margin-top: 0.25rem;
-  }
 }
 @media only screen and (min-width: 768px) and (max-width: 1365px) {
   .landing {
@@ -383,21 +387,45 @@ footer .right div {
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    margin: 6rem 0 6rem 6rem;
+    margin: 6rem 6rem 6rem 6rem;
   }
   .landing_content h1, .landing_content p {
-    width: 80%;
+    width: 100%;
     margin-left: 0rem;
     color: #222222;
+    text-align: start;
   }
   .landing_content .start_guide_button {
     margin: 3rem 0 0 0;
+  }
+  .landing_content .scroll_reminder {
+    margin-top: 4rem;
+    animation: bounce 2s infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .landing_content .scroll_reminder .arrow {
+    width: 13rem;
+    height: 13rem;
+  }
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(10px);
+    }
+    60% {
+      transform: translateY(5px);
+    }
   }
   .about {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: start;
+    margin: 0rem 0 6rem 0;
   }
   .about_container {
     width: 80%;
@@ -427,43 +455,6 @@ footer .right div {
     width: 60%;
     height: 60%;
   }
-  .characters {
-    margin: 0rem 0rem;
-  }
-  .characters_title {
-    font-family: "Raleway", sans-serif;
-    font-weight: 700;
-    font-size: 6rem;
-    margin: 6rem 0 0 6rem;
-  }
-  .characters_wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 6rem;
-    padding: 4rem 0;
-    margin-bottom: 4rem;
-  }
-  .characters_wrapper .box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 30rem;
-    height: 40rem;
-  }
-  .characters_wrapper .box img {
-    width: 100%;
-    height: 100%;
-  }
-  .characters_wrapper .box h1 {
-    font-family: "Raleway", sans-serif;
-    font-weight: 700;
-    font-size: 3rem;
-    display: block;
-    margin-top: 0.25rem;
-  }
 }
 @media only screen and (max-width: 767px) {
   .landing {
@@ -475,6 +466,7 @@ footer .right div {
   .landing_content h1, .landing_content p {
     width: 100%;
     margin-left: 0rem;
+    text-align: start;
   }
   .landing_content h1 {
     font-family: "Raleway", sans-serif;
@@ -500,7 +492,7 @@ footer .right div {
   .about_container {
     width: 80%;
     padding-bottom: 0rem;
-    margin: 6rem 3rem 3rem 3rem;
+    margin: 0rem 3rem 3rem 3rem;
   }
   .about_container h1 {
     margin: 0;
@@ -528,48 +520,6 @@ footer .right div {
   .about_asset img {
     width: 80%;
     height: 80%;
-  }
-  .characters {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0rem 0rem;
-  }
-  .characters_title {
-    font-family: "Raleway", sans-serif;
-    font-weight: 700;
-    font-size: 3rem;
-    width: 80%;
-    margin: 6rem 0 0 2rem;
-  }
-  .characters_wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    padding: 4rem 0;
-    margin-bottom: 0rem;
-  }
-  .characters_wrapper .box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 20rem;
-    height: 30rem;
-  }
-  .characters_wrapper .box h1 {
-    font-family: "Raleway", sans-serif;
-    font-weight: 700;
-    font-size: 2rem;
-    display: block;
-    margin-top: 0.25rem;
-  }
-  .characters_wrapper .box img {
-    width: 100%;
-    height: 100%;
   }
 }
 .wrapper_left {
