@@ -33,13 +33,14 @@
             <p>Laat hieronder even je e-mail achter en een korte beschrijving
                 van jouw bedrijf of idee en krijg je karakter!
             </p>
-            <form id="details_form">
+            <form id="details_form" method="post" action="../uitkomsten/uitkomst3.html">
                 <input type="hidden" id="solution_number" value="3">
+                <p id="sol_text"></p>
                 <label for="email">Email*</label>
                 <input type="email" id="email" name="email" required>
                 <label for="bericht">Bericht*</label>
                 <textarea id="bericht" name="bericht" required></textarea>
-                <a href="../uitkomsten/uitkomst3.html"><button id="next_button" class="general_style_button" type="submit">VERSTUREN</button></a>
+                <button id="next_button" class="general_style_button" type="submit">VERSTUREN</button>
             </form>
         </div>
     </div>
