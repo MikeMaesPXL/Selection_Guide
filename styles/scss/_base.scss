@@ -30,9 +30,15 @@ $font-open_sans: 'Open Sans', sans-serif;
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background-color: $main-color;
+    // background-color: $main-color;
+    background-color: #fff;
     pointer-events: none;
     z-index: 9999;
+    mix-blend-mode: difference;
+
+    :active {
+        transform: scale(1.5);
+    }
 }
 
 @keyframes pulse-animation {
@@ -43,6 +49,7 @@ $font-open_sans: 'Open Sans', sans-serif;
         border-bottom-right-radius: 50%;
         border-top-right-radius: 0%;
         border-bottom-left-radius: 0%;
+        mix-blend-mode: normal;
     }
     50% {
         transform: scale(1.25);
@@ -51,6 +58,7 @@ $font-open_sans: 'Open Sans', sans-serif;
         border-bottom-right-radius: 50%;
         border-top-right-radius: 0%;
         border-bottom-left-radius: 0%;
+        mix-blend-mode: normal;
     }
     100% {
         transform: scale(1.1);
@@ -59,6 +67,7 @@ $font-open_sans: 'Open Sans', sans-serif;
         border-bottom-right-radius: 50%;
         border-top-right-radius: 0%;
         border-bottom-left-radius: 0%;
+        mix-blend-mode: normal;
     }
 }
 
