@@ -296,6 +296,7 @@ footer .right div {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-size: 2.25rem;
+  width: 75%;
   margin-top: 2rem;
   font-style: italic;
   text-align: center;
@@ -655,12 +656,15 @@ footer .right div {
   }
   .wrapper_left_content {
     width: 70%;
-    margin: 0rem 0 0rem 6rem;
+    margin: 3rem 0 6rem 6rem;
   }
   .wrapper_left_content h1 {
     font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 3.5rem;
+  }
+  .wrapper_left_assets {
+    display: none;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -674,7 +678,7 @@ footer .right div {
   }
   .wrapper_left_content {
     width: 70%;
-    margin: 0rem 0 2rem 3rem;
+    margin: 3rem 0 3rem 3rem;
   }
   .wrapper_left_content h1 {
     font-family: "Raleway", sans-serif;
@@ -691,6 +695,9 @@ footer .right div {
     font-family: "Open Sans", sans-serif;
     font-weight: 600;
     font-size: 1.25rem;
+  }
+  .wrapper_left_assets {
+    display: none;
   }
 }
 .collect_page {

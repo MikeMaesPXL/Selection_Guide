@@ -20,6 +20,7 @@
 
         p {
             @include paragraphStyle(2.25rem);
+            width: 75%;
             margin-top: 2rem;
             font-style: italic;
             text-align: center;
