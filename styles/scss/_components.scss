@@ -154,6 +154,7 @@ footer {
 @media only screen and (max-width: 767px) {
     .header {
         margin: 0 2.5rem;
+        padding: 0;
 
         p {
             @include paragraphStyle(1rem);

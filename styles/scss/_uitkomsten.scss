@@ -102,6 +102,7 @@
         @include displayFlex(column, center, center);
         gap: 0rem;
         min-height: auto;
+        padding: 0;
 
         &_content {
             width: 70%;

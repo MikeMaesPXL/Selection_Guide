@@ -21,6 +21,7 @@ $font-open_sans: 'Open Sans', sans-serif;
     text-decoration: none;
     scroll-behavior: smooth;
     cursor: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .custom_cursor {
@@ -30,7 +31,6 @@ $font-open_sans: 'Open Sans', sans-serif;
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    // background-color: $main-color;
     background-color: #fff;
     pointer-events: none;
     z-index: 9999;
@@ -77,7 +77,6 @@ $font-open_sans: 'Open Sans', sans-serif;
 
 body {
     background-color: $secondary-color;
-    // background: linear-gradient(30deg, #cbcbcb, #EEEEEE);
     overflow-x: hidden;
 }
 

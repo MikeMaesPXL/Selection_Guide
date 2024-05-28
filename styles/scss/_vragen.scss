@@ -39,10 +39,11 @@
             }
         }
         .button_wrapper {
+            @include displayFlex(row, center, center);
             margin-top: 1rem;
 
             button {
-                margin-right: 1.5rem;
+                margin-right: 1rem;
             }
         }
         #error_message {
@@ -107,6 +108,7 @@
         @include displayFlex(column, center, start);
         gap: 0rem;
         min-height: auto;
+        padding: 0;
 
         &_content {
             width: 70%;

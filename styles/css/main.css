@@ -8,6 +8,7 @@
   text-decoration: none;
   scroll-behavior: smooth;
   cursor: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .custom_cursor {
@@ -233,6 +234,7 @@ footer .right div {
 @media only screen and (max-width: 767px) {
   .header {
     margin: 0 2.5rem;
+    padding: 0;
   }
   .header p {
     font-family: "Open Sans", sans-serif;
@@ -505,6 +507,7 @@ footer .right div {
 @media only screen and (max-width: 767px) {
   .landing {
     min-height: auto;
+    padding: 0;
   }
   .landing_content {
     margin: 3rem 3rem 3rem 3rem;
@@ -539,6 +542,7 @@ footer .right div {
     flex-direction: column;
     justify-content: start;
     align-items: start;
+    padding: 0;
   }
   .about_container {
     width: 80%;
@@ -620,10 +624,14 @@ footer .right div {
   font-size: 1.75rem;
 }
 .wrapper_left_content .button_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   margin-top: 1rem;
 }
 .wrapper_left_content .button_wrapper button {
-  margin-right: 1.5rem;
+  margin-right: 1rem;
 }
 .wrapper_left_content #error_message {
   font-family: "Open Sans", sans-serif;
@@ -690,6 +698,7 @@ footer .right div {
     align-items: start;
     gap: 0rem;
     min-height: auto;
+    padding: 0;
   }
   .wrapper_left_content {
     width: 70%;
@@ -797,7 +806,7 @@ footer .right div {
 @media only screen and (max-width: 767px) {
   .collect_page {
     height: auto;
-    padding: 0 5%;
+    padding: 0;
   }
   .collect_page .form_container {
     width: 90%;
@@ -938,6 +947,7 @@ footer .right div {
     align-items: center;
     gap: 0rem;
     min-height: auto;
+    padding: 0;
   }
   .wrapper_right_content {
     width: 70%;
@@ -1109,6 +1119,7 @@ footer .right div {
     align-items: center;
     min-height: auto;
     margin-top: 1rem;
+    padding: 0;
   }
   .contact_content {
     display: flex;

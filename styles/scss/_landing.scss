@@ -241,6 +241,7 @@
 @media only screen and (max-width: 767px) {
     .landing {
         min-height: auto;
+        padding: 0;
     
         &_content {
             margin: 3rem 3rem 3rem 3rem;
@@ -277,6 +278,7 @@
 
     .about {
         @include displayFlex(column, start, start);
+        padding: 0;
 
         &_container {
             width: 80%;

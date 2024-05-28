@@ -122,6 +122,7 @@
         @include displayFlex(column, start, center);
         min-height: auto;
         margin-top: 1rem;
+        padding: 0;
     
         &_content {
             @include displayFlex(column, center, center);
