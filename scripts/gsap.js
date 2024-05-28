@@ -72,3 +72,49 @@ document.addEventListener("DOMContentLoaded", function() {
         shakeAnimation.pause().progress(0);
     });
 });
+
+//Slide in content - asset
+document.addEventListener("DOMContentLoaded", function() {
+    function animateSection(content, asset) {
+        gsap.fromTo(content, 
+            { 
+                opacity: 0, 
+                x: -100 
+            },
+            { 
+                opacity: 1, 
+                x: 0, 
+                duration: 0.75, 
+                scrollTrigger: {
+                    trigger: content,
+                    start: "top 60%",
+                    end: "top 40%",
+                    toggleActions: "play none none none"
+                }
+            }
+        );
+
+        gsap.fromTo(asset, 
+            { 
+                opacity: 0, 
+                x: 100 
+            },
+            { 
+                opacity: 1, 
+                x: 0, 
+                duration: 0.75, 
+                scrollTrigger: {
+                    trigger: asset,
+                    start: "top 60%",
+                    end: "top 40%",
+                    toggleActions: "play none none none"
+                }
+            }
+        );
+    }
+
+    animateSection(".wrapper_left_content", ".wrapper_left_assets");
+    animateSection(".wrapper_right_content", ".wrapper_right_assets");
+    animateSection(".about_container", ".about_asset");
+});
+

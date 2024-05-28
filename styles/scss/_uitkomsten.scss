@@ -9,6 +9,9 @@
     gap: 6rem;
 
     &_content {
+        opacity: 0;
+        transform: translateX(-100%);
+
         @include displayFlex(column, center, start);
         width: calc(50%);
         margin: 0 10rem 2rem 0;
@@ -33,6 +36,9 @@
     }
 
     &_assets {
+        opacity: 0;
+        transform: translateX(100%);
+
         @include displayFlex(row, center, center);
         width: calc(50%);
         margin: 0 6rem 3rem 0;
