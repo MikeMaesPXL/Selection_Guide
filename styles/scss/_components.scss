@@ -2,6 +2,7 @@
 .header {
     @include navSpacing();
     margin: 0rem 8rem;
+    padding: 0 5%;
 
     a {
         text-decoration: none;
@@ -9,7 +10,6 @@
     }
 
     .logo {
-        width: 50%rem;
         height: 5rem;
     }
 }
@@ -108,6 +108,9 @@ footer {
     .header {
         p {
             @include paragraphStyle(2rem);
+        }
+        .logo {
+            height: 6rem;
         }
     }
     

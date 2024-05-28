@@ -3,6 +3,7 @@
 .collect_page {
     @include displayFlex(row, center, center);
     height: 85svh;
+    padding: 0 5%;
 
     .form_container {
         width: 50%;

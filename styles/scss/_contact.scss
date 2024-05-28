@@ -3,6 +3,7 @@
 .contact {
     @include displayFlex(column, center, center);
     min-height: 85vh;
+    padding: 0 5%;
 
     &_content {
         @include displayFlex(row, center, start);

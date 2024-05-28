@@ -3,6 +3,7 @@
 .landing {
     @include displayFlex(row, center, center);
     min-height: 85vh;
+    padding: 0 5%;
 
     &_content {
         @include displayFlex(column, center, center);
@@ -56,6 +57,7 @@
 .about {
     @include displayFlex(row, start, center);
     margin: 3rem 0;
+    padding: 0 5%;
 
     &_container {
         width: 60%;
@@ -152,7 +154,7 @@
         min-height: auto;
     
         &_content {
-            @include displayFlex(column, center, start);
+            @include displayFlex(column, center, center);
             margin: 6rem 6rem 6rem 6rem;
     
             h1, p {
@@ -220,6 +222,7 @@
         }
 
         &_asset {
+            display: none;
             img {
                 width: 60%;
                 height: 60%;

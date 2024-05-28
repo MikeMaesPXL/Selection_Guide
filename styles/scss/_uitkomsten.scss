@@ -5,6 +5,7 @@
     @include displayFlex(row, center, center);
     width: 100%;
     min-height: 85vh;
+    padding: 0 5%;
     gap: 6rem;
 
     &_content {
