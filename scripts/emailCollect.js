@@ -11,7 +11,7 @@ document.getElementById('details_form').addEventListener('submit', function(even
     const publilemon_email = 'publilemonquiz@gmail.com';
     const solutionNumber = document.getElementById('solution_number').value;
 
-    if (email && bericht) {
+    if (email) {
         const serviceID = 'service_a8bbx3a'; // EmailJS service ID
         const templateID = 'template_kik2h3a'; // EmailJS template ID
 
