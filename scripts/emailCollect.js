@@ -12,8 +12,8 @@ document.getElementById('details_form').addEventListener('submit', function(even
     const solutionNumber = document.getElementById('solution_number').value;
 
     if (email) {
-        const serviceID = 'service_a8bbx3a'; // EmailJS service ID
-        const templateID = 'template_kik2h3a'; // EmailJS template ID
+        const serviceID = 'service_h4hc4o5'; // EmailJS service ID
+        const templateID = 'template_l0b1zsm'; // EmailJS template ID
 
         const templateParams = {
             to_email: publilemon_email,
